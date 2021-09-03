@@ -1,78 +1,79 @@
 <template>
   <div class="right" ref="box">
-    <div
-      :style="
-        'width:' +
-        width_4 +
-        'px;height:49%;display:flex;justify-content:center;align-items:center;margin:0 4%;'
-      "
-    >
-      <span v-if="empty_4_1" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_4_1"
-        :playerId="playerId_4_1"
-        :autoplay="true"
-        :videoWidth="width_4"
-        v-if="playerId_4_1"
-        selectScreenBlock="4"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_4 +
-        'px;height:49%;display:flex;justify-content:center;align-items:center;margin:0 4%;'
-      "
-    >
-      <span v-if="empty_4_2" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_4_2"
-        :playerId="playerId_4_2"
-        :autoplay="true"
-        :videoWidth="width_4"
-        v-if="playerId_4_2"
-        selectScreenBlock="4"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_4 +
-        'px;height:49%;display:flex;justify-content:center;align-items:center;margin:0 4%;'
-      "
-    >
-      <span v-if="empty_4_3" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_4_3"
-        :playerId="playerId_4_3"
-        :autoplay="true"
-        :videoWidth="width_4"
-        v-if="playerId_4_3"
-        selectScreenBlock="4"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_4 +
-        'px;height:49%;display:flex;justify-content:center;align-items:center;margin:0 4%;'
-      "
-    >
-      <span v-if="empty_4_4" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_4_4"
-        :playerId="playerId_4_4"
-        :autoplay="true"
-        :videoWidth="width_4"
-        v-if="playerId_4_4"
-        selectScreenBlock="4"
-      />
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;">
+      <div
+        :style="
+          'width:' +
+          width_4 +
+          'px;height:50%;display:flex;justify-content:center;align-items:center;margin:18px;'
+        "
+      >
+        <p v-if="empty_4_1" :style="'width:'+width_4+'px;height:'+(box_height_4+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_4+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_4_1"
+          :playerId="playerId_4_1"
+          :autoplay="true"
+          :videoWidth="width_4"
+          v-if="playerId_4_1"
+          selectScreenBlock="4"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_4 +
+          'px;height:50%;display:flex;justify-content:center;align-items:center;margin:18px;'
+        "
+      >
+        <p v-if="empty_4_2" :style="'width:'+width_4+'px;height:'+(box_height_4+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_4+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_4_2"
+          :playerId="playerId_4_2"
+          :autoplay="true"
+          :videoWidth="width_4"
+          v-if="playerId_4_2"
+          selectScreenBlock="4"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_4 +
+          'px;height:50%;display:flex;justify-content:center;align-items:center;margin:18px;'
+        "
+      >
+        <p v-if="empty_4_3" :style="'width:'+width_4+'px;height:'+(box_height_4+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_4+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_4_3"
+          :playerId="playerId_4_3"
+          :autoplay="true"
+          :videoWidth="width_4"
+          v-if="playerId_4_3"
+          selectScreenBlock="4"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_4 +
+          'px;height:50%;display:flex;justify-content:center;align-items:center;margin:18px;'
+        "
+      >
+        <p v-if="empty_4_4" :style="'width:'+width_4+'px;height:'+(box_height_4+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_4+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_4_4"
+          :playerId="playerId_4_4"
+          :autoplay="true"
+          :videoWidth="width_4"
+          v-if="playerId_4_4"
+          selectScreenBlock="4"
+        />
+      </div>
     </div>
   </div>
 </template>
 <script>
 import Player from "@/components/player.vue";
-import waitImg from "@/assets/images/wait.jpg";
 export default {
   components: {
     Player,
@@ -94,12 +95,12 @@ export default {
     return {
       dialogWidth: 980,
       dialogHeight: 0,
-      waitImg: waitImg,
       playerId_4_1: "",
       playerId_4_2: "",
       playerId_4_3: "",
       playerId_4_4: "",
       width_4: 0,
+      box_height_4:0,
       empty_4_1: true,
       empty_4_2: true,
       empty_4_3: true,
@@ -134,6 +135,7 @@ export default {
       let num = 1025 / 576;
       let height = this.$refs.box.offsetHeight / 2.5;
       this.width_4 = this.$refs.box.offsetWidth / 2.5;
+      this.box_height_4 = parseInt(this.width_4) * 0.5625;
       if (this.width_4 / height > num) {
         this.width_4 = (1025 / 576) * height - 10;
       } else {

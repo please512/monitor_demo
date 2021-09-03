@@ -1,163 +1,164 @@
 <template>
   <div class="right" ref="box">
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_1" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_1"
-        :playerId="playerId_9_1"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_1"
-        selectScreenBlock="9"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_2" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_2"
-        :playerId="playerId_9_2"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_2"
-        selectScreenBlock="9"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_3" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_3"
-        :playerId="playerId_9_3"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_3"
-        selectScreenBlock="9"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_4" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_4"
-        :playerId="playerId_9_4"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_4"
-        selectScreenBlock="9"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_5" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_5"
-        :playerId="playerId_9_5"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_5"
-        selectScreenBlock="9"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_6" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_6"
-        :playerId="playerId_9_6"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_6"
-        selectScreenBlock="9"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_7" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_7"
-        :playerId="playerId_9_7"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_7"
-        selectScreenBlock="9"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_8" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_8"
-        :playerId="playerId_9_8"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_8"
-        selectScreenBlock="9"
-      />
-    </div>
-    <div
-      :style="
-        'width:' +
-        width_9 +
-        'px;height:33%;display:flex;justify-content:center;align-items:center;margin:0 1%;'
-      "
-    >
-      <span v-if="!playerId_9_9" style="color: #fff">暂无信号</span>
-      <Player
-        :src="src_9_9"
-        :playerId="playerId_9_9"
-        :autoplay="true"
-        :videoWidth="width_9"
-        v-if="playerId_9_9"
-        selectScreenBlock="9"
-      />
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;">
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_1" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_1"
+          :playerId="playerId_9_1"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_1"
+          selectScreenBlock="9"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_2" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_2"
+          :playerId="playerId_9_2"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_2"
+          selectScreenBlock="9"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_3" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_3"
+          :playerId="playerId_9_3"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_3"
+          selectScreenBlock="9"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_4" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_4"
+          :playerId="playerId_9_4"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_4"
+          selectScreenBlock="9"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_5" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_5"
+          :playerId="playerId_9_5"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_5"
+          selectScreenBlock="9"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_6" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_6"
+          :playerId="playerId_9_6"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_6"
+          selectScreenBlock="9"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_7" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_7"
+          :playerId="playerId_9_7"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_7"
+          selectScreenBlock="9"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_8" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_8"
+          :playerId="playerId_9_8"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_8"
+          selectScreenBlock="9"
+        />
+      </div>
+      <div
+        :style="
+          'width:' +
+          width_9 +
+          'px;height:30%;display:flex;justify-content:center;align-items:center;margin:5px;'
+        "
+      >
+        <p v-if="empty_9_9" :style="'width:'+width_9+'px;height:'+(box_height_9+1)+'px;border:1px #fff solid;color:#fff;text-align:center;line-height:'+box_height_9+1+'px;background:#000;'">暂无信号</p>
+        <Player
+          :src="src_9_9"
+          :playerId="playerId_9_9"
+          :autoplay="true"
+          :videoWidth="width_9"
+          v-if="playerId_9_9"
+          selectScreenBlock="9"
+        />
+      </div>
     </div>
   </div>
 </template>
 <script>
 import Player from "@/components/player.vue";
-import waitImg from "@/assets/images/wait.jpg";
 export default {
   components: {
     Player,
@@ -179,7 +180,6 @@ export default {
     return {
       dialogWidth: 980,
       dialogHeight: 0,
-      waitImg: waitImg,
       playerId_9_1: "",
       playerId_9_2: "",
       playerId_9_3: "",
@@ -190,6 +190,7 @@ export default {
       playerId_9_8: "",
       playerId_9_9: "",
       width_9: 0,
+      box_height_9:0,
       empty_9_1: true,
       empty_9_2: true,
       empty_9_3: true,
@@ -249,6 +250,7 @@ export default {
       let num = 1025 / 576;
       let height = this.$refs.box.offsetHeight / 3.1;
       this.width_9 = this.$refs.box.offsetWidth / 3.2;
+      this.box_height_9 = parseInt(this.width_9) * 0.5625;
       if (this.width_9 / height > num) {
         this.width_9 = (1025 / 576) * height - 10;
       } else {

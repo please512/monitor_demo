@@ -51,7 +51,7 @@
 <script>
 import eventBus from '@/eventBus.js'
 import videojs from "video.js";
-import waitImg from '@/assets/images/wait.jpg' 
+import waitImg from '@/assets/images/loading.png' 
 export default {
   props: {
     autoplay: {

@@ -23,7 +23,7 @@
   </el-dialog>
 </template>
 <script>
-import waitImg from "@/assets/images/wait.jpg";
+import waitImg from "@/assets/images/loading.png";
 export default {
   props: {
     dialogVisible: {
