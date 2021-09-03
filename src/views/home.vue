@@ -171,7 +171,6 @@ export default {
   mounted() {
     this.renderScreen();
     this.getCameraList();
-    this.getRecordList();
     // this.src = "http://172.17.31.203:8080/live/livestream.m3u8";
     // this.src1 = "http://172.17.31.203:8080/live/livestream.m3u8";
     // this.src2 = "http://livealone302.iqilu.com/iqilu/sdtv.m3u8";
@@ -187,14 +186,6 @@ export default {
     });
   },
   methods: {
-    getRecordList(){
-      axios.get("http://172.16.117.90:18090/api/visual/exceptionRecord").then((res) => {
-          console.log(res)
-          return
-        res.data.data.forEach((s) => {
-        })
-      })
-    },
     closeDialog(){
       this.visible=false
     },
